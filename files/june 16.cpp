@@ -96,3 +96,35 @@ int main(){
     return 0;
 }
 */
+
+
+/* Area of Retangle */
+#include <iostream>
+using namespace std;
+
+class rect{
+    private:
+        int length, breadth;
+    public:
+    void set_date(int l, int b) {
+        length = l;
+        breadth = b;
+    }
+
+    void display(){
+        cout << "Length: " << length << endl;
+        cout << "Breadth: " << breadth << endl;
+        cout << "Area: " << length * breadth << endl;
+        cout << "*********************" << endl;
+    }
+};
+
+int main(){
+    rect r1, r2;
+    int l, b;
+    r1.set_date(10, 5);
+    r1.display();
+    r2.set_date(20, 10);
+    r2.display();
+    return 0;
+}
