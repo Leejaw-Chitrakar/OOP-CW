@@ -1,5 +1,5 @@
 // WAP to count total objects created for a class
-// Static Date Member Function
+// Static data Member Function
 /*
 #include <iostream>
 using namespace std;
@@ -10,7 +10,7 @@ class car {
         int year;
         static int count;
     public:
-        void set_date(string m, string mk, int y) {
+        void set_data(string m, string mk, int y) {
             model = m;
             make = mk;
             year = y;
@@ -33,17 +33,17 @@ int main(){
     int year;
     car c1;
     cout << "-------------------------" << endl;
-    cout << "Date of car 1: " << endl;
+    cout << "data of car 1: " << endl;
     cout << "-------------------------" << endl;
-    c1.set_date("ModelX", "Tesla", 2020);
+    c1.set_data("ModelX", "Tesla", 2020);
     c1.display();
     cout << endl ;
     car c2;
     cout << "-------------------------" << endl;
-    cout << "Date of car 2: " << endl;
+    cout << "data of car 2: " << endl;
     cout << "-------------------------" << endl;
 
-    c2.set_date("ModelS", "Tesla", 2021);
+    c2.set_data("ModelS", "Tesla", 2021);
     c2.display();
 
     return 0;
@@ -99,6 +99,7 @@ int main(){
 
 
 /* Area of Retangle */
+
 #include <iostream>
 using namespace std;
 
@@ -106,7 +107,7 @@ class rect{
     private:
         int length, breadth;
     public:
-    void set_date(int l, int b) {
+    void set_data(int l, int b) {
         length = l;
         breadth = b;
     }
@@ -117,14 +118,29 @@ class rect{
         cout << "Area: " << length * breadth << endl;
         cout << "*********************" << endl;
     }
+
+    void add(rect r){
+        length += r.length;
+        breadth += r.breadth;
+    }
+
+    void display_sum_area() {
+        cout << "Sum of Length: " << length << endl;
+        cout << "Sum of Breadth: " << breadth << endl;
+        cout << "Sum of Area: " << length * breadth << endl;
+        cout << "*********************" << endl;
+    }
 };
 
 int main(){
     rect r1, r2;
     int l, b;
-    r1.set_date(10, 5);
+    r1.set_data(10, 5);
     r1.display();
-    r2.set_date(20, 10);
+    r2.set_data(20, 10);
     r2.display();
+    r1.add(r2);
+    cout << "After adding r1 and r2:" << endl;
+    r1.display_sum_area();
     return 0;
 }
