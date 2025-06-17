@@ -264,7 +264,7 @@ int mainm(){
 
 
 /* Operator Overloading */
-
+/*
 #include <iostream>
 using namespace std;
 
@@ -293,3 +293,10 @@ int main(){
     ap.display();
 
 }
+*/
+
+/* (sizeof(), &, ., *, ?) Expect these operators all other operators can be overloaded */
+/* unary operaor doesn't takes any operand and binary takes only one operand */
+/* unary = no operand */
+/* Binary = only one operand */
+/* we can't combine operators inside operator function */
