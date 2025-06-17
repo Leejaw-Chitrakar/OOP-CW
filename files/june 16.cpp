@@ -195,6 +195,7 @@ int main()
     create a c3 object by addding c1 and c2.
 */
 
+/*
 #include <iostream>
 using namespace std;
 
@@ -229,4 +230,66 @@ int main(){
 
     c3 = c2.addcomplex(c1);
     c3.display();
+}
+*/
+
+
+
+/* Error xa */
+/*
+#include <iostream>
+using namespace std;
+
+class apple {
+public:
+    int a;
+
+    apple(){
+        a = 10;
+    }
+
+    void display(){
+        cout << a << endl;
+    }
+};
+
+int mainm(){
+    apple m1;
+    m1.display();
+    m1.a++;
+    m1.display();
+    return 0;
+}
+*/
+
+
+/* Operator Overloading */
+
+#include <iostream>
+using namespace std;
+
+class apple {
+public:
+    int a;
+
+    apple(){
+        a = 25;
+    }
+
+    void display(){
+        cout << "A = " << a << endl;
+    }
+
+    void operator ++(){
+        ++a;
+    }
+};
+
+int main(){
+    apple ap;
+    ap.display();
+
+    ++ap;
+    ap.display();
+
 }
