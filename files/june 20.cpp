@@ -105,8 +105,6 @@ int main()
 }
 */
 
-
-
 /* Nameless Temporary Argument */
 /* Its called nameless because only the compiler uses it not the used and the process is hidded */
 /* Always use parameterized constructor */
@@ -142,7 +140,7 @@ class car{
     car(int p){
         price = p;
     }
-    
+
 };
 
 int main(){
@@ -158,4 +156,48 @@ int main(){
 }
 */
 
+/* Overloading Unary(Single) prefix/postfix operator */
+/* Unary Operators (++ , --) */
 
+#include <iostream>
+using namespace std;
+
+class test
+{
+private:
+int n;
+public:
+test(){
+    n=12;
+}
+
+test (int n1){
+    n = n1;
+}
+
+void display(){
+    cout << "Test =" << n << endl;
+}
+
+test operator ++(){
+    ++n;
+    return test(n);
+}
+
+test operator --(){
+    n--;
+    return test(n);
+}
+
+};
+
+int main()
+{
+    test t1,t2,t3;
+    t1.display();
+    t2 = ++t1;
+    t2.display();
+    t2 = --t3;
+    t2.display();
+    return 0;
+}
