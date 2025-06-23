@@ -159,41 +159,47 @@ int main(){
 /* Overloading Unary(Single) prefix/postfix operator */
 /* Unary Operators (++ , --) */
 
+/*
 #include <iostream>
 using namespace std;
 
 class test
 {
 private:
-int n;
+    int n;
+
 public:
-test(){
-    n=12;
-}
+    test()
+    {
+        n = 12;
+    }
 
-test (int n1){
-    n = n1;
-}
+    test(int n1)
+    {
+        n = n1;
+    }
 
-void display(){
-    cout << "Test =" << n << endl;
-}
+    void display()
+    {
+        cout << "Test =" << n << endl;
+    }
 
-test operator ++(){
-    ++n;
-    return test(n);
-}
+    test operator++()
+    {
+        ++n;
+        return test(n);
+    }
 
-test operator --(){
-    n--;
-    return test(n);
-}
-
+    test operator--()
+    {
+        n--;
+        return test(n);
+    }
 };
 
 int main()
 {
-    test t1,t2,t3;
+    test t1, t2, t3;
     t1.display();
     t2 = ++t1;
     t2.display();
@@ -201,3 +207,4 @@ int main()
     t2.display();
     return 0;
 }
+*/
