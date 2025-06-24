@@ -3,7 +3,7 @@
 int addition(int a,int b);
 int subtraction(int a,int b);
 int multiplication(int a,int b);
-int division(int a,int b);
+float division(float a,float b);
 
 using namespace std;
 int main(){
@@ -50,7 +50,7 @@ int multiplication(int a,int b){
     return 0;
 }
 
-int division(int a,int b){
+float division(float a,float b){
     if(b==0){
         cout<<"Divisor must not be zero!!!!";
         return 0;

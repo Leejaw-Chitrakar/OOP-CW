@@ -1,20 +1,16 @@
 #include <iostream>
-#include <string>
-
 using namespace std;
 
-void displayMessage(string message = "Hello, World", char punctuation = '!') {
+void displayMessage(string message = "Greetings from Darjeeling", char punctuation = '!') {
     cout << message << punctuation << endl;
 }
 
 int main() {
     displayMessage();
 
-    displayMessage("Welcome to default arguments");
+    displayMessage("Coding is fun"); 
 
-    displayMessage("Good morning", '.');
-
-    displayMessage("Hello, World", '?'); 
+    displayMessage("Have a great day", '!');
 
     return 0;
 }

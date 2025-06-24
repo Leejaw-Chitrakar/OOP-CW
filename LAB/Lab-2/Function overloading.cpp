@@ -8,22 +8,17 @@ int add(int a, int b){
 }
 
 int add(float a, float b, float c){
-    int sum;
+    float sum;
     sum = a + b + c;
     return sum;
 }
 
 int main(){
-    int a, b, c;
-    a = 5;
-    b = 10;
-
+    int a = 5, b = 13;
     cout << "The sum of " << a << " and " << b << " is " << add(a,b) << endl;
 
-    a = 4.5;
-    b = 7.5;
-    c = 2.5;
-    cout << "The sum of " << a << ", " << b << " and " << c << " is " << add(a,b,c) << endl;
+    float d = 4.8, e = 7.7, f = 2.6;
+    cout << "The sum of " << d << ", " << e << " and " << f << " is " << add(d,e,f) << endl;
 
     return 0;
 }
