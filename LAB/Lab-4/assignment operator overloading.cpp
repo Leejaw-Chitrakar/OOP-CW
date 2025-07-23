@@ -1,55 +1,48 @@
 #include <iostream>
+
 using namespace std;
 
-class MyItem {
+class Weight
+{
 private:
-    int id;
-    string description;
+    int kilograms;
+    int grams;
 
 public:
-    MyItem(int i = 0, string desc = "Default Item") : id(i), description(desc) {}
+    void setData(int kg, int g)
+    {
+        kilograms = kg;
+        grams = g;
+    }
 
-    MyItem& operator=(const MyItem& other) {
-        cout << "Assignment operator called!" << endl;
+    void display()
+    {
+        cout << "Total weight = " << kilograms << " kg and " << grams << " grams" << endl;
+    }
 
-        if (this == &other) {
-            return *this;
+    void operator+=(Weight temp)
+    {
+        kilograms += temp.kilograms;
+        grams += temp.grams;
+
+        if (grams >= 1000)
+        {
+            kilograms += grams / 1000;
+            grams %= 1000;
         }
-
-        id = other.id;
-        description = other.description;
-
-        return *this;
-    }
-
-    void display() const {
-        cout << "ID: " << id << ", Description: " << description << endl;
-    }
-
-    void setDescription(string desc) {
-        description = desc;
     }
 };
 
-int main() {
-    MyItem item1(101, "Laptop");
-    MyItem item2(202, "Monitor");
-
-    cout << "Initial states:" << endl;
-    item1.display();
-    item2.display();
-
-    cout << "\nAssigning item2 = item1;" << endl;
-    item2 = item1;
-
-    cout << "\nStates after assignment:" << endl;
-    item1.display();
-    item2.display();
-
-    cout << "\nModifying item1 to show independence:" << endl;
-    item1.setDescription("Gaming Laptop");
-    item1.display();
-    item2.display();
-
+int main()
+{
+    Weight w1, w2;
+    w1.setData(5, 750);
+    w2.setData(3, 500);
+    cout << "Initial Weights:" << endl;
+    w1.display();
+    w2.display();
+    w1 += w2;
+    cout << "\nWeight after adding w2 to w1:" << endl;
+    w1.display();
     return 0;
 }
