@@ -1,6 +1,3 @@
-//Unit 3
-
-
 //class ==> blueprint of an object
 #include <iostream>
 using namespace std;

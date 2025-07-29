@@ -26,10 +26,9 @@ protected:
     int rollNumber;
 
 public:
-    Student(string libName, int count, string sName, int roll){
-        Library(libName, count);
-        studentName = sName;
-        rollNumber = roll;
+    Student(string libName, int count, string sName, int roll)
+        : Library(libName, count), studentName(sName), rollNumber(roll)
+    {
         cout << "Student constructor called for: " << studentName << " (Roll: " << rollNumber << ")" << endl;
     }
 
@@ -45,10 +44,9 @@ private:
     int bookPrice;
 
 public:
-    Book(string libName, int count, string sName, int roll, string title, int price){
-        bookTitle = title;
-        Student(libName, count, sName, roll);
-        Student(libName, count, sName, roll);
+    Book(string libName, int count, string sName, int roll, string title, int price)
+        : Student(libName, count, sName, roll), bookTitle(title), bookPrice(price)
+    {
         cout << "Book constructor called for: " << bookTitle << " (Price: $" << bookPrice << ")" << endl;
     }
 

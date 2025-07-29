@@ -35,19 +35,12 @@ float area_circle(float r){
 }
 */
 
-/*
+
 //we can take an input even if an default value is set to any function
 #include <iostream>
 using namespace std;
 float div(float nu, float d = 3);
-int main(){
-    float nu,d;
-    cout<<"enter a numerator and denominator: ";
-    cin>>nu>>d;
-    cout<<"Result with default denominator is: "<<div(nu)<<endl;
-    cout<<"Result with user input is: "<<div(nu,d)<<endl;
-    return 0;
-}
+
 float div(float nu, float d){
     if(d==0){
         cout<<"divisor must not be Zero";
@@ -56,7 +49,16 @@ float div(float nu, float d){
         return nu/d;
     }
 }
-*/
+
+int main(){
+    float nu,d;
+    cout<<"enter a numerator and denominator: ";
+    cin>>nu>>d;
+    cout<<"Result with default denominator is: "<<div(nu)<<endl;
+    cout<<"Result with user input is: "<<div(nu,d)<<endl;
+    return 0;
+}
+
 
 /*
 #include <iostream>

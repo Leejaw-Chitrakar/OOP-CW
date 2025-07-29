@@ -1,4 +1,4 @@
-/*
+
 #include <iostream>
 using namespace std;
 int a = 50;
@@ -12,7 +12,7 @@ int main (){
         cout<<"*p = "<<*p<<endl; //mem address of p ---> 50
     return 0;
 }
-*/
+
 
 /*
 #include <iostream>

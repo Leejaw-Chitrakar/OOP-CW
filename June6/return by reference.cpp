@@ -38,7 +38,7 @@ int main(){
 
 
 
-/*
+
 //return by reference
 #include <iostream>
 using namespace std;
@@ -58,7 +58,7 @@ int main(){
     cout<<"After swap"<<endl<<"x = "<<x<<endl<<"y = "<<y<<endl;
     return 0;
 }
-*/
+
 
 
 
