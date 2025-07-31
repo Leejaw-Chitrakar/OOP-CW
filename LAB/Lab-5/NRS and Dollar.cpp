@@ -76,22 +76,10 @@ int main() {
     cout << "American Amount: ";
     americanAmount.display();
 
-    NPR combinedAmount = nepaliAmount + americanAmount;
+    NPR combinedAmount = nepaliAmount + americanAmount;git 
 
     cout << "\nCombined amount (in NPR): ";
     combinedAmount.display();
-
-    NPR npr2(100, 20);
-    USD usd2(1, 10);
-
-    cout << "\nNepali Amount 2: ";
-    npr2.display();
-    cout << "American Amount 2: ";
-    usd2.display();
-
-    NPR combinedAmount2 = npr2 + usd2;
-    cout << "Combined amount 2 (in NPR): ";
-    combinedAmount2.display();
 
     return 0;
 }

@@ -50,15 +50,5 @@ int main() {
     cout << "Sum of amounts (using operator+): ";
     sumAmount.display();
 
-    NPR amount3(20, 90);
-    NPR amount4(15, 15);
-    cout << "\nAmount 3: ";
-    amount3.display();
-    cout << "Amount 4: ";
-    amount4.display();
-    NPR sumAmount2 = amount3 + amount4;
-    cout << "Sum of amounts (using operator+): ";
-    sumAmount2.display();
-
     return 0;
 }
