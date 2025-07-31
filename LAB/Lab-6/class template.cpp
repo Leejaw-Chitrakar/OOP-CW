@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-template <typename T1, typename T2>
+template <class T1, class T2>
 class Pair {
 private:
     T1 first;
@@ -29,15 +29,10 @@ int main() {
     Pair<int, double> p1(10, 20.5);
     cout << "Pair 1: ";
     p1.display();
-    cout << "First value: " << p1.getFirst() << ", Second value: " << p1.getSecond() << endl;
 
     Pair<string, char> p2("Hello", 'W');
     cout << "Pair 2: ";
     p2.display();
-
-    Pair<bool, int> p3(true, 123);
-    cout << "Pair 3: ";
-    p3.display();
 
     return 0;
 }

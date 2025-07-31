@@ -17,87 +17,28 @@ void processValue(int value) {
     cout << "Processing value: " << value << endl;
 }
 
+ void check(int n){
+    try {
+        processValue(n);
+    } catch (int e) {
+        cerr << "Caught an integer error code: " << e << endl;
+    } catch (const char* msg) {
+        cerr << "Caught a string error: " << msg << endl;
+    } catch (double d) {
+        cerr << "Caught a double error: " << d << endl;
+    } catch (const exception& e) {
+        cerr << "Caught a standard exception: " << e.what() << endl;
+    } catch (...) {
+        cerr << "Caught an unknown exception!" << endl;
+    }
+    cout << endl;
+ }
 int main() {
     cout << "--- Handling Multiple Exceptions ---" << endl;
-
-    try {
-        processValue(-5);
-    } catch (int e) {
-        cerr << "Caught an integer error code: " << e << endl;
-    } catch (const char* msg) {
-        cerr << "Caught a string error: " << msg << endl;
-    } catch (double d) {
-        cerr << "Caught a double error: " << d << endl;
-    } catch (const std::exception& e) {
-        cerr << "Caught a standard exception: " << e.what() << endl;
-    } catch (...) {
-        cerr << "Caught an unknown exception!" << endl;
-    }
-
-    cout << "\n";
-
-    try {
-        processValue(0);
-    } catch (int e) {
-        cerr << "Caught an integer error code: " << e << endl;
-    } catch (const char* msg) {
-        cerr << "Caught a string error: " << msg << endl;
-    } catch (double d) {
-        cerr << "Caught a double error: " << d << endl;
-    } catch (const std::exception& e) {
-        cerr << "Caught a standard exception: " << e.what() << endl;
-    } catch (...) {
-        cerr << "Caught an unknown exception!" << endl;
-    }
-
-    cout << "\n";
-
-    try {
-        processValue(150);
-    } catch (int e) {
-        cerr << "Caught an integer error code: " << e << endl;
-    } catch (const char* msg) {
-        cerr << "Caught a string error: " << msg << endl;
-    } catch (double d) {
-        cerr << "Caught a double error: " << d << endl;
-    } catch (const std::exception& e) {
-        cerr << "Caught a standard exception: " << e.what() << endl;
-    } catch (...) {
-        cerr << "Caught an unknown exception!" << endl;
-    }
-
-    cout << "\n";
-
-    try {
-        processValue(50);
-    } catch (int e) {
-        cerr << "Caught an integer error code: " << e << endl;
-    } catch (const char* msg) {
-        cerr << "Caught a string error: " << msg << endl;
-    } catch (double d) {
-        cerr << "Caught a double error: " << d << endl;
-    } catch (const std::exception& e) {
-        cerr << "Caught a standard exception: " << e.what() << endl;
-    } catch (...) {
-        cerr << "Caught an unknown exception!" << endl;
-    }
-
-    cout << "\n";
-
-    try {
-        processValue(42);
-    } catch (int e) {
-        cerr << "Caught an integer error code: " << e << endl;
-    } catch (const char* msg) {
-        cerr << "Caught a string error: " << msg << endl;
-    } catch (double d) {
-        cerr << "Caught a double error: " << d << endl;
-    } catch (const std::exception& e) {
-        cerr << "Caught a standard exception: " << e.what() << endl;
-    } catch (...) {
-        cerr << "Caught an unknown exception!" << endl;
-    }
-
+    check(-5);
+    check(0);
+    check(50);
+    check(42);
     cout << "\nProgram continues after all exception handling." << endl;
 
     return 0;
