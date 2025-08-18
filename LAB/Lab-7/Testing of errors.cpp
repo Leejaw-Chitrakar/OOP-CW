@@ -8,10 +8,10 @@ using namespace std;
 int main()
 {
     // A. Check a good file
-    ifstream goodFile("source.txt");
+    ifstream goodFile("source_1.txt");
     if (goodFile.is_open())
     {
-        cout << "State after opening source.txt:" << endl;
+        cout << "State after opening source_1.txt:" << endl;
         cout << "  good(): " << goodFile.good() << endl;
         cout << "  eof(): " << goodFile.eof() << endl;
         cout << "  fail(): " << goodFile.fail() << endl;
@@ -19,13 +19,13 @@ int main()
     }
     else
     {
-        cerr << "Error: Could not open source.txt" << endl;
+        cerr << "Error: Could not open source_1.txt" << endl;
     }
     goodFile.close();
     cout << endl;
 
     // B. Check for EOF and fail
-    ifstream eofFile("source.txt");
+    ifstream eofFile("source_1.txt");
     if (eofFile.is_open())
     {
         char ch;
